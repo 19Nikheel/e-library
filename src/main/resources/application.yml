@@ -1,0 +1,21 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 300MB
+      max-request-size: 300MB
+      file-size-threshold: 2KB
+  application:
+    name: library
+  datasource:
+    name: library
+    username: ${DB_NAME}
+    password: ${DB_PASSWORD}
+    url:  ${DB_URL}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
